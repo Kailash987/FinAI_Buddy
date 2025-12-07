@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Intro to Investing",
+    "difficulty": "Beginner",
+    "progress": 40,
+    "description": "Learn the fundamentals of investing and building wealth"
+  },
+  {
+    "id": 2,
+    "title": "Understanding Taxes",
+    "difficulty": "Intermediate",
+    "progress": 0,
+    "description": "Master tax deductions, credits, and filing strategies"
+  },
+  {
+    "id": 3,
+    "title": "Budgeting Basics",
+    "difficulty": "Beginner",
+    "progress": 70,
+    "description": "Create and maintain an effective personal budget"
+  },
+  {
+    "id": 4,
+    "title": "Credit Scores",
+    "difficulty": "Beginner",
+    "progress": 100,
+    "description": "Understand how credit scores work and improve yours"
+  },
+  {
+    "id": 5,
+    "title": "Retirement Planning",
+    "difficulty": "Advanced",
+    "progress": 20,
+    "description": "Plan for a secure financial future"
+  },
+  {
+    "id": 6,
+    "title": "Stock Market Fundamentals",
+    "difficulty": "Intermediate",
+    "progress": 55,
+    "description": "Learn how stocks work and how to analyze them"
+  }
+]

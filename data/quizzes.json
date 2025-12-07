@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "question": "What does ETF stand for?",
+    "options": [
+      "Exchange Traded Fund",
+      "Equity Trading Fund",
+      "Extra Tax Fee",
+      "Electronic Transfer Fund"
+    ],
+    "answer": "Exchange Traded Fund"
+  },
+  {
+    "id": 2,
+    "question": "What is the recommended emergency fund size?",
+    "options": [
+      "1-2 months of expenses",
+      "3-6 months of expenses",
+      "1 year of expenses",
+      "No emergency fund needed"
+    ],
+    "answer": "3-6 months of expenses"
+  },
+  {
+    "id": 3,
+    "question": "Which of these is NOT a type of retirement account?",
+    "options": [
+      "401(k)",
+      "IRA",
+      "Roth IRA",
+      "EFT"
+    ],
+    "answer": "EFT"
+  },
+  {
+    "id": 4,
+    "question": "What does APR stand for?",
+    "options": [
+      "Annual Percentage Rate",
+      "Average Payment Rate",
+      "Adjusted Principal Rate",
+      "Annual Principal Return"
+    ],
+    "answer": "Annual Percentage Rate"
+  },
+  {
+    "id": 5,
+    "question": "What is diversification in investing?",
+    "options": [
+      "Investing all money in one stock",
+      "Spreading investments across different assets",
+      "Only investing in bonds",
+      "Day trading frequently"
+    ],
+    "answer": "Spreading investments across different assets"
+  },
+  {
+    "id": 6,
+    "question": "What is a good credit score typically considered to be?",
+    "options": [
+      "300-579",
+      "580-669",
+      "670-739",
+      "740-850"
+    ],
+    "answer": "740-850"
+  },
+  {
+    "id": 7,
+    "question": "What does ROI stand for?",
+    "options": [
+      "Rate of Investment",
+      "Return on Investment",
+      "Risk of Investment",
+      "Ratio of Income"
+    ],
+    "answer": "Return on Investment"
+  },
+  {
+    "id": 8,
+    "question": "What is the 50/30/20 budgeting rule?",
+    "options": [
+      "50% savings, 30% needs, 20% wants",
+      "50% needs, 30% wants, 20% savings",
+      "50% wants, 30% savings, 20% needs",
+      "50% investments, 30% bills, 20% fun"
+    ],
+    "answer": "50% needs, 30% wants, 20% savings"
+  }
+]

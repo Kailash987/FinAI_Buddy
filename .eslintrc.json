@@ -1,0 +1,6 @@
+{
+  "extends": "next",
+  "rules": {},
+  "settings": {},
+  "ignoreDuringBuilds": true
+}
