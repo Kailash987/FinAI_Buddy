@@ -24,29 +24,39 @@ export default function ChatBox() {
   ]);
   const [input, setInput] = useState('');
 
-  const handleSend = () => {
-    if (!input.trim()) return;
+  const handleSend = async () => {
+  if (!input.trim()) return;
 
-    const userMessage: Message = {
-      id: messages.length + 1,
-      text: input,
-      sender: 'user',
-      timestamp: new Date(),
-    };
-
-    setMessages([...messages, userMessage]);
-    setInput('');
-
-    setTimeout(() => {
-      const aiMessage: Message = {
-        id: messages.length + 2,
-        text: "This is a sample AI response about finance. In a real application, this would connect to an AI service to provide personalized financial advice and insights.",
-        sender: 'ai',
-        timestamp: new Date(),
-      };
-      setMessages((prev) => [...prev, aiMessage]);
-    }, 1000);
+  const userMessage: Message = {
+    id: messages.length + 1,
+    text: input,
+    sender: "user",
+    timestamp: new Date(),
   };
+
+  setMessages((prev) => [...prev, userMessage]);
+  const userInput = input;
+  setInput("");
+
+  // Call your server API
+  const res = await fetch("/api/chat", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ message: userInput }),
+  });
+
+  const data = await res.json();
+
+  const aiMessage: Message = {
+    id: messages.length + 2,
+    text: data.response,
+    sender: "ai",
+    timestamp: new Date(),
+  };
+
+  setMessages((prev) => [...prev, aiMessage]);
+};
+
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
