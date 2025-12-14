@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import clsx from "clsx";
+import rawSubtopicDetails from "@/data/subtopicDetails.json";
+const subtopicDetails = rawSubtopicDetails as Record<string, string[]>;
 
 interface Subtopic {
   id: string;
@@ -43,6 +45,7 @@ export default function LessonContent({
       block: "start",
     });
   };
+  
 
   /* =======================
      QUIZ STATE
@@ -142,11 +145,14 @@ export default function LessonContent({
               <h2 className="text-xl font-semibold mb-2">
                 {sub.title}
               </h2>
-              <p className="text-slate-700 leading-relaxed">
-                This section explains <b>{sub.title}</b> in detail.
-                Add examples, insights, visuals, or deeper explanations
-                related to the topic.
-              </p>
+              <ul className="list-disc pl-5 space-y-2 text-slate-700">
+                {(subtopicDetails[sub.title] ?? [
+                "This topic is important for building financial literacy.",
+                "Understanding it helps in making better decisions."
+                ]).map((point, idx) => (
+                <li key={idx}>{point}</li>
+                ))}
+              </ul>
             </section>
           ))}
 
