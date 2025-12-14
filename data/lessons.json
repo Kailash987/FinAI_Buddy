@@ -1,44 +1,146 @@
 [
   {
     "id": 1,
+    "slug": "intro-to-investing",
     "title": "Intro to Investing",
-    "difficulty": "Beginner",
+    "level": "Beginner",
     "progress": 40,
-    "description": "Learn the fundamentals of investing and building wealth"
+    "description": "Learn the fundamentals of investing and building wealth.",
+    "coreConcepts": [
+      "Understand risk vs reward",
+      "Learn the difference between stocks, bonds, and mutual funds",
+      "Importance of diversifying investments",
+      "Power of compound interest"
+    ],
+    "quiz": {
+      "question": "What is one benefit of diversification?",
+      "options": [
+        "It guarantees profit",
+        "It reduces overall risk",
+        "It eliminates all financial losses",
+        "It doubles your returns automatically"
+      ],
+      "answer": "It reduces overall risk"
+    }
   },
   {
     "id": 2,
+    "slug": "understanding-taxes",
     "title": "Understanding Taxes",
-    "difficulty": "Intermediate",
+    "level": "Intermediate",
     "progress": 0,
-    "description": "Master tax deductions, credits, and filing strategies"
+    "description": "Master tax deductions, credits and filing strategies.",
+    "coreConcepts": [
+      "Difference between tax credits and tax deductions",
+      "How tax brackets work",
+      "Common tax forms and filing statuses",
+      "Strategies to reduce taxable income legally"
+    ],
+    "quiz": {
+      "question": "Which reduces your tax bill dollar-for-dollar?",
+      "options": [
+        "Tax deduction",
+        "Tax credit",
+        "Tax bracket",
+        "Tax withholding"
+      ],
+      "answer": "Tax credit"
+    }
   },
   {
     "id": 3,
+    "slug": "budgeting-basics",
     "title": "Budgeting Basics",
-    "difficulty": "Beginner",
+    "level": "Beginner",
     "progress": 70,
-    "description": "Create and maintain an effective personal budget"
+    "description": "Create and maintain an effective personal budget.",
+    "coreConcepts": [
+      "Track your income and expenses regularly",
+      "Set realistic financial goals",
+      "Use the 50/30/20 rule for better budgeting",
+      "Save at least 20% of your income"
+    ],
+    "quiz": {
+      "question": "What is a key benefit of budgeting?",
+      "options": [
+        "It helps you overspend safely",
+        "It lets you spend money without limits",
+        "It helps manage income and expenses",
+        "It guarantees higher income"
+      ],
+      "answer": "It helps manage income and expenses"
+    }
   },
   {
     "id": 4,
+    "slug": "credit-scores",
     "title": "Credit Scores",
-    "difficulty": "Beginner",
+    "level": "Beginner",
     "progress": 100,
-    "description": "Understand how credit scores work and improve yours"
+    "description": "Understand how credit scores work and improve yours.",
+    "coreConcepts": [
+      "Payment history is the biggest factor",
+      "Keep credit utilization below 30%",
+      "Avoid late payments and defaults",
+      "Having a long credit history boosts your score"
+    ],
+    "quiz": {
+      "question": "Which factor has the largest impact on your credit score?",
+      "options": [
+        "Credit card color",
+        "Payment history",
+        "Your job title",
+        "The type of bank you use"
+      ],
+      "answer": "Payment history"
+    }
   },
   {
     "id": 5,
+    "slug": "retirement-planning",
     "title": "Retirement Planning",
-    "difficulty": "Advanced",
+    "level": "Advanced",
     "progress": 20,
-    "description": "Plan for a secure financial future"
+    "description": "Plan for a secure financial future.",
+    "coreConcepts": [
+      "Importance of starting retirement savings early",
+      "Differences between 401(k), IRA, and Roth accounts",
+      "Employer matches boost retirement growth",
+      "Withdrawal rules and penalties to avoid"
+    ],
+    "quiz": {
+      "question": "What is one advantage of a Roth IRA?",
+      "options": [
+        "Withdrawals are tax-free in retirement",
+        "Contributions reduce your taxable income immediately",
+        "You can withdraw anytime without penalties",
+        "It guarantees a fixed investment return"
+      ],
+      "answer": "Withdrawals are tax-free in retirement"
+    }
   },
   {
     "id": 6,
+    "slug": "stock-market-fundamentals",
     "title": "Stock Market Fundamentals",
-    "difficulty": "Intermediate",
+    "level": "Intermediate",
     "progress": 55,
-    "description": "Learn how stocks work and how to analyze them"
+    "description": "Learn how stocks work and how to analyze them.",
+    "coreConcepts": [
+      "Difference between stocks, ETFs, and index funds",
+      "What market capitalization means",
+      "Long-term investing vs short-term trading",
+      "Why stock prices change daily"
+    ],
+    "quiz": {
+      "question": "What is a stock?",
+      "options": [
+        "A loan you give a company",
+        "A share of ownership in a company",
+        "A guaranteed investment return",
+        "A type of government bond"
+      ],
+      "answer": "A share of ownership in a company"
+    }
   }
 ]

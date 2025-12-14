@@ -1,20 +1,32 @@
 'use client';
 
 import Link from 'next/link';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { BookOpen } from 'lucide-react';
 
 interface LessonCardProps {
-  id: number;
+  slug: string;              // ✅ changed
   title: string;
   difficulty: string;
   progress: number;
   description?: string;
 }
 
-export default function LessonCard({ id, title, difficulty, progress, description }: LessonCardProps) {
+export default function LessonCard({
+  slug,
+  title,
+  difficulty,
+  progress,
+  description,
+}: LessonCardProps) {
   const getDifficultyColor = (level: string) => {
     switch (level.toLowerCase()) {
       case 'beginner':
@@ -29,7 +41,7 @@ export default function LessonCard({ id, title, difficulty, progress, descriptio
   };
 
   return (
-    <Link href={`/lessons/${id}`}>
+    <Link href={`/lessons/${slug}`}>
       <Card className="hover:shadow-xl transition-all duration-300 border-slate-200 hover:border-emerald-400 cursor-pointer group">
         <CardHeader>
           <div className="flex items-start justify-between">
@@ -39,17 +51,24 @@ export default function LessonCard({ id, title, difficulty, progress, descriptio
               </div>
               <div>
                 <CardTitle className="text-lg">{title}</CardTitle>
-                <CardDescription className="mt-1">{description}</CardDescription>
+                <CardDescription className="mt-1">
+                  {description}
+                </CardDescription>
               </div>
             </div>
-            <Badge className={getDifficultyColor(difficulty)}>{difficulty}</Badge>
+            <Badge className={getDifficultyColor(difficulty)}>
+              {difficulty}
+            </Badge>
           </div>
         </CardHeader>
+
         <CardContent>
           <div className="space-y-2">
             <div className="flex justify-between text-sm">
               <span className="text-slate-600">Progress</span>
-              <span className="font-semibold text-slate-900">{progress}%</span>
+              <span className="font-semibold text-slate-900">
+                {progress}%
+              </span>
             </div>
             <Progress value={progress} className="h-2" />
           </div>

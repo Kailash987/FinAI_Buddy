@@ -21,9 +21,9 @@ export default function LessonsPage() {
         {lessonsData.map((lesson) => (
           <LessonCard
             key={lesson.id}
-            id={lesson.id}
+            slug={lesson.slug}
             title={lesson.title}
-            difficulty={lesson.difficulty}
+            difficulty={lesson.level}
             progress={lesson.progress}
             description={lesson.description}
           />
