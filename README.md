@@ -1,5 +1,5 @@
 # FinAI Buddy
-FinAI Buddy is a modern, responsive FinTech learning assistant built with Next.js, Tailwind CSS, and shadcn/ui to help users learn finance the smart way.It offers interactive lessons, quizzes, progress tracking, and an AI-style chat interface in a clean dashboard experience.
+FinAI Buddy is a modern, responsive FinTech learning assistant built with Next.js, Tailwind CSS, and shadcn/ui to help users learn personal finance in a smart and interactive way.It offers interactive lessons, quizzes, progress tracking, and an AI-style chat interface in a clean dashboard experience.
 
 ## 🚀 Getting Started
 ```sh
