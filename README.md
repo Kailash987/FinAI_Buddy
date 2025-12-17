@@ -1,6 +1,5 @@
 # FinAI Buddy
-A full-stack AI-powered personal finance management and budgeting application built with Next.js, Node.js, and MongoDB.
-FinAIance Buddy helps users track expenses, analyze spending habits, and receive AI-driven insights for smarter financial decision-making.
+FinAI Buddy is a modern, responsive FinTech learning assistant built with Next.js, Tailwind CSS, and shadcn/ui to help users learn finance the smart way.It offers interactive lessons, quizzes, progress tracking, and an AI-style chat interface in a clean dashboard experience.
 
 ## 🚀 Getting Started
 ```sh
@@ -47,13 +46,15 @@ AI/ML Integration (Python / TensorFlow / OpenAI API) – Modules for generating 
 Next Auth / JWT – Secure authentication and authorization for users.
 
 ## 📈 Features
-💸 Expense tracking and budgeting dashboard
+📚 Interactive finance lessons with difficulty levels and progress tracking
 
-📊 Interactive charts and analytics
+📝 Quiz module with instant feedback, progress bar, and final score summary
 
-🧮 AI-based spending categorization and predictions
+📊 Client-side progress analytics using interactive charts
 
-🪙 Monthly savings and goal tracker
+💬 Finance learning chat assistant with conversational UI (mock AI responses)
+
+📱 Modern, fully responsive dashboard with persistent sidebar navigation
 
 🔒 Secure authentication and data storage
 
