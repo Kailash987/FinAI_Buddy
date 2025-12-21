@@ -146,7 +146,7 @@ export default function LessonContent({
                 {sub.title}
               </h2>
               <ul className="list-disc pl-5 space-y-2 text-slate-700">
-                {(subtopicDetails[sub.id] ?? [
+                {(subtopicDetails[sub.title] ?? [
                 "This topic is important for building financial literacy.",
                 "Understanding it helps in making better decisions."
                 ]).map((point, idx) => (

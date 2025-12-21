@@ -6,11 +6,11 @@ import { Home, BookOpen, ClipboardList, TrendingUp, MessageSquare } from 'lucide
 import { cn } from '@/lib/utils';
 
 const navItems = [
-  { href: '/dashboard', label: 'Home', icon: Home },
-  { href: '/dashboard/lessons', label: 'Lessons', icon: BookOpen },
-  { href: '/dashboard/quiz', label: 'Quizzes', icon: ClipboardList },
-  { href: '/dashboard/progress', label: 'Progress', icon: TrendingUp },
-  { href: '/dashboard/chat', label: 'Chat', icon: MessageSquare },
+  { href: '/', label: 'Home', icon: Home },
+  { href: '/lessons', label: 'Lessons', icon: BookOpen },
+  { href: '/quiz', label: 'Quizzes', icon: ClipboardList },
+  { href: '/progress', label: 'Progress', icon: TrendingUp },
+  { href: '/chat', label: 'Chat', icon: MessageSquare },
 ];
 
 export default function AppSidebar() {

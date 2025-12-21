@@ -41,7 +41,7 @@ export default function LessonCard({
   };
 
   return (
-    <Link href={`/dashboard/lessons/${slug}`}>
+    <Link href={`/lessons/${slug}`}>
       <Card className="hover:shadow-xl transition-all duration-300 border-slate-200 hover:border-emerald-400 cursor-pointer group">
         <CardHeader>
           <div className="flex items-start justify-between">
