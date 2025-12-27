@@ -17,13 +17,13 @@ export default function ProfileMenu() {
 
   /* Fetch logged-in user */
   useEffect(() => {
-    fetch("http://localhost:4000/api/auth/me", {
-      credentials: "include",
-    })
-      .then((res) => res.ok && res.json())
-      .then((data) => data && setUser(data))
-      .catch(() => {});
-  }, []);
+  fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/me`, {
+    credentials: "include",
+  })
+    .then((res) => res.ok && res.json())
+    .then((data) => data && setUser(data))
+    .catch(() => {});
+}, []);
 
   /* Close dropdown on outside click */
   useEffect(() => {
@@ -37,12 +37,12 @@ export default function ProfileMenu() {
   }, []);
 
   const logout = async () => {
-    await fetch("http://localhost:4000/api/auth/logout", {
-      method: "POST",
-      credentials: "include",
-    });
-    router.replace("/login");
-  };
+  await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/logout`, {
+    method: "POST",
+    credentials: "include",
+  });
+  router.replace("/login");
+};
 
   if (!user) return null;
 

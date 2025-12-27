@@ -12,24 +12,25 @@ export const RequireAuth = ({
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const checkAuth = async () => {
-      try {
-        const res = await fetch("http://localhost:4000/api/auth/me", {
-          credentials: "include",
-        });
+  const checkAuth = async () => {
+    try {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/me`, {
+        credentials: "include",
+      });
 
-        if (!res.ok) {
-          router.replace("/login");
-        } else {
-          setLoading(false);
-        }
-      } catch {
+      if (!res.ok) {
         router.replace("/login");
+      } else {
+        setLoading(false);
       }
-    };
+    } catch {
+      router.replace("/login");
+    }
+  };
 
-    checkAuth();
-  }, [router]);
+  checkAuth();
+}, [router]);
+
 
   if (loading) {
     return (
