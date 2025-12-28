@@ -50,20 +50,33 @@ export default function ProfileMenu() {
 
   return (
     <div ref={ref} className="relative">
-      {/* Avatar */}
+      {/* Rectangular Card Container */}
       <button
         onClick={() => setOpen((v) => !v)}
-        className="flex items-center gap-2"
+        className="w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200 bg-slate-700/50 hover:bg-slate-700 text-left"
       >
-        <div className="w-10 h-10 rounded-full bg-emerald-200 text-emerald-800 flex items-center justify-center font-semibold">
+        {/* Rectangular Avatar */}
+        <div className="w-10 h-10 rounded-lg bg-emerald-500 text-white flex items-center justify-center font-semibold flex-shrink-0">
           {initial}
         </div>
-        <ChevronDown className="w-4 h-4 text-slate-500" />
+        
+        {/* User Information */}
+        <div className="flex-1 min-w-0">
+          <p className="font-medium text-emerald-400 truncate">
+            {user.name ?? "User"}
+          </p>
+          <p className="text-sm text-slate-300 truncate">
+            {user.email}
+          </p>
+        </div>
+        
+        {/* Chevron Icon */}
+        <ChevronDown className="w-4 h-4 text-slate-300 flex-shrink-0" />
       </button>
 
       {/* Dropdown */}
       {open && (
-        <div className="absolute right-0 mt-3 w-64 rounded-xl bg-white shadow-lg border border-slate-200 z-50">
+        <div className="absolute left-0 bottom-full mb-2 w-64 rounded-xl bg-white shadow-lg border border-slate-200 z-50">
           <div className="p-4 border-b">
             <p className="font-medium text-slate-900">
               {user.name ?? "User"}

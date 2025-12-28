@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Home, BookOpen, ClipboardList, TrendingUp, MessageSquare } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import ProfileMenu from './ProfileMenu';
 
 const navItems = [
   { href: '/dashboard', label: 'Home', icon: Home },
@@ -47,13 +48,7 @@ export default function AppSidebar() {
       </nav>
 
       <div className="mt-auto pt-6 border-t border-slate-700">
-        <div className="bg-slate-700/50 rounded-lg p-4">
-          <p className="text-sm font-medium text-emerald-400">Learning Level</p>
-          <p className="text-lg font-bold mt-1">Intermediate</p>
-          <div className="mt-3 bg-slate-600 rounded-full h-2 overflow-hidden">
-            <div className="bg-emerald-500 h-full w-2/3 rounded-full"></div>
-          </div>
-        </div>
+        <ProfileMenu />
       </div>
     </aside>
   );
