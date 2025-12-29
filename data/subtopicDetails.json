@@ -1,149 +1,847 @@
 {
-  "Understand risk vs reward": [
-    "Higher potential returns usually come with higher risk.",
-    "Investors must balance growth opportunities with possible losses.",
-    "Risk tolerance depends on age, income, and financial goals."
-  ],
+  "Understand risk vs reward":{
+  "modules":{
+   "Risk":[
+    "Risk is the uncertainty of returns.",
+    "Higher risk means greater possibility of loss.",
+    "Market conditions influence risk levels."
+   ],
+   "Reward":[
+    "Reward is the potential profit from investments.",
+    "Higher reward usually comes with higher risk.",
+    "Returns vary across asset types."
+   ],
+   "Risk Tolerance":[
+    "Depends on age, income, and goals.",
+    "Young investors can take more risk.",
+    "Stable income allows better risk handling."
+   ],
+   "Low Risk Assets":[
+    "FDs and bonds are low risk.",
+    "They provide stable returns.",
+    "Suitable for conservative investors."
+   ],
+   "Key Takeaways":[
+    "Higher returns require higher risk.",
+    "Risk varies by investor profile.",
+    "Balanced portfolios are ideal."
+   ]
+  },
+  "quiz":{
+   "question":"Higher returns usually come with?",
+   "options":["Low risk","No risk","Higher risk","Zero risk"],
+   "answer":"Higher risk"
+  }
+ },
 
-  "Learn the difference between stocks, bonds, and mutual funds": [
-    "Stocks represent ownership in a company and offer growth potential.",
-    "Bonds are safer investments that provide fixed income.",
-    "Mutual funds diversify investments across multiple assets."
-  ],
+  "Learn the difference between stocks, bonds, and mutual funds": {
+    "modules": {
+      "Stocks": [
+        "Stocks represent partial ownership in a publicly listed company.",
+        "When you buy stocks, you become a shareholder and benefit from company growth.",
+        "Stock prices change based on company performance, market conditions, and investor demand."
+      ],
+      "Stockholders": [
+        "Stockholders are entitled to a share in company profits through dividends.",
+        "They have voting rights in major company decisions.",
+        "Higher ownership percentage means greater influence and returns."
+      ],
+      "Bonds": [
+        "Bonds are fixed-income investments where you lend money to companies or governments.",
+        "Bond issuers pay periodic interest until maturity.",
+        "They are generally safer than stocks but offer lower returns."
+      ],
+      "Mutual Funds": [
+        "Mutual funds pool money from many investors into diversified portfolios.",
+        "They reduce individual investment risk through asset diversification.",
+        "They are managed by professional fund managers."
+      ],
+      "Key Takeaways": [
+        "Stocks provide ownership and growth potential.",
+        "Bonds provide steady income with lower risk.",
+        "Mutual funds offer diversification and professional management."
+      ]
+    },
+    "quiz": {
+      "question": "Which investment represents ownership in a company?",
+      "options": ["Bond", "Stock", "Mutual fund", "FD"],
+      "answer": "Stock"
+    }
+  },
 
-  "Importance of diversifying investments": [
-    "Diversification spreads investments across different asset types.",
-    "It reduces the impact of losses from any single investment.",
-    "A diversified portfolio is more stable over the long term."
-  ],
+  "Importance of diversifying investments":{
+  "modules":{
+   "Diversification":[
+    "Diversification means spreading your money across different investments.",
+    "It prevents complete loss if one investment fails.",
+    "It balances risk and return across your portfolio."
+   ],
+   "Asset Classes":[
+    "Stocks, bonds, gold, and real estate are major asset classes.",
+    "Each asset reacts differently to market conditions.",
+    "Using multiple asset classes improves long-term portfolio stability."
+   ],
+   "Benefits":[
+    "Reduces overall portfolio volatility.",
+    "Protects wealth during market downturns.",
+    "Creates more consistent long-term returns."
+   ],
+   "Examples":[
+    "Stocks + bonds reduce stock market risk.",
+    "Adding gold protects against inflation.",
+    "Global investments reduce country-specific risk."
+   ],
+   "Key Takeaways":[
+    "Never depend on a single investment type.",
+    "Diversification is the foundation of smart investing.",
+    "A diversified portfolio grows safely over time."
+   ]
+  },
+  "quiz":{
+   "question":"Why diversify?",
+   "options":["Increase taxes","Reduce risk","Lose money","Stop investing"],
+   "answer":"Reduce risk"
+  }
+ },
 
-  "Power of compound interest": [
-    "Compound interest allows earnings to generate additional earnings.",
-    "Starting early significantly increases long-term wealth.",
-    "Time is more powerful than the amount initially invested."
-  ],
+  "Power of compound interest":{
+  "modules":{
+   "Compounding":[
+    "Compound interest means earning interest on both principal and past interest.",
+    "Your money grows faster as interest is added repeatedly.",
+    "It creates exponential wealth growth over long periods."
+   ],
+   "Time":[
+    "Starting early gives compounding more years to work.",
+    "Longer time periods multiply returns significantly.",
+    "Even small delays reduce long-term wealth."
+   ],
+   "Examples":[
+    "₹1000 invested early grows more than ₹5000 invested late.",
+    "Small monthly investments can create large wealth.",
+    "Long-term SIPs benefit most from compounding."
+   ],
+   "Frequency":[
+    "More compounding cycles increase final returns.",
+    "Monthly compounding earns more than yearly.",
+    "Reinvesting profits boosts growth further."
+   ],
+   "Key Takeaways":[
+    "Start investing as early as possible.",
+    "Stay invested for long durations.",
+    "Time is the biggest wealth creator."
+   ]
+  },
+  "quiz":{
+   "question":"Compounding works best with?",
+   "options":["Less time","More time","No time","Random time"],
+   "answer":"More time"
+  }
+ },
 
 
-  "Track your income and expenses regularly": [
-    "Tracking reveals where your money is actually going.",
-    "It helps identify unnecessary or impulsive spending.",
-    "Consistent tracking improves financial awareness."
-  ],
+  "Track your income and expenses regularly":{
+  "modules":{
+   "Tracking":[
+    "Tracking shows exactly where your money goes.",
+    "It reveals unnecessary and impulsive spending.",
+    "It helps you take control of your finances."
+   ],
+   "Tools":[
+    "Mobile budgeting apps make tracking easy.",
+    "Spreadsheets help analyze monthly patterns.",
+    "Bank statements show real spending behavior."
+   ],
+   "Benefits":[
+    "Improves monthly budget planning.",
+    "Increases savings potential.",
+    "Builds strong financial awareness."
+   ],
+   "Mistakes":[
+    "Ignoring small daily expenses.",
+    "Not updating records regularly.",
+    "Failing to review monthly spending."
+   ],
+   "Key Takeaways":[
+    "Tracking is the foundation of money management.",
+    "Awareness leads to better saving habits.",
+    "Consistent tracking improves financial health."
+   ]
+  },
+  "quiz":{
+   "question":"Why track expenses?",
+   "options":["Overspend","Control money","Avoid taxes","Increase bills"],
+   "answer":"Control money"
+  }
+ },
 
-  "Set realistic financial goals": [
-    "Clear goals provide direction for saving and spending.",
-    "Realistic goals are easier to achieve and maintain.",
-    "Goal-setting increases motivation and discipline."
-  ],
+  "Set realistic financial goals":{
+  "modules":{
+   "Goal Setting":[
+    "Financial goals give clear direction to your money.",
+    "They motivate disciplined saving habits.",
+    "They improve decision-making."
+   ],
+   "SMART Goals":[
+    "Goals should be Specific and clear.",
+    "They must be Measurable to track progress.",
+    "They must be Time-bound to stay achievable."
+   ],
+   "Short Term":[
+    "Emergency fund protects against uncertainty.",
+    "Debt repayment reduces financial burden.",
+    "Vacation saving prevents credit dependency."
+   ],
+   "Long Term":[
+    "Home purchase builds long-term assets.",
+    "Retirement ensures financial independence.",
+    "Wealth creation secures future lifestyle."
+   ],
+   "Key Takeaways":[
+    "Clear goals improve financial success.",
+    "Plan goals with timelines.",
+    "Consistency builds wealth."
+   ]
+  },
+  "quiz":{
+   "question":"SMART goals are?",
+   "options":["Random","Specific","Confusing","Risky"],
+   "answer":"Specific"
+  }
+ },
 
-  "Use the 50/30/20 rule for better budgeting": [
-    "50% of income is allocated to essential needs.",
-    "30% is reserved for wants and lifestyle expenses.",
-    "20% is saved or invested for the future."
-  ],
+  "Use the 50/30/20 rule for better budgeting":{
+  "modules":{
+   "Needs":[
+    "50% of income is reserved for essential expenses.",
+    "Includes rent, groceries, utilities and transport.",
+    "These expenses must be paid every month."
+   ],
+   "Wants":[
+    "30% is used for lifestyle and enjoyment.",
+    "Covers dining, shopping, and entertainment.",
+    "Helps maintain work-life balance."
+   ],
+   "Savings":[
+    "20% goes into savings and investments.",
+    "Builds emergency and retirement funds.",
+    "Supports long-term wealth growth."
+   ],
+   "Benefits":[
+    "Simple and easy to follow.",
+    "Improves saving discipline.",
+    "Keeps lifestyle spending under control."
+   ],
+   "Key Takeaways":[
+    "Follow a fixed budgeting structure.",
+    "Save before spending on wants.",
+    "Maintain balanced finances."
+   ]
+  },
+  "quiz":{
+   "question":"Savings percentage?",
+   "options":["10%","20%","30%","50%"],
+   "answer":"20%"
+  }
+ },
 
-  "Save at least 20% of your income": [
-    "Saving consistently builds long-term financial security.",
-    "It prepares you for emergencies and unexpected expenses.",
-    "Regular saving supports wealth creation over time."
-  ],
+  "Save at least 20% of your income":{
+  "modules":{
+   "Saving":[
+    "Saving builds long-term financial security.",
+    "It prepares you for emergencies and uncertainties.",
+    "Regular saving reduces dependency on loans."
+   ],
+   "Automation":[
+    "Automatic transfers ensure you save first.",
+    "Recurring deposits build discipline.",
+    "SIPs grow wealth steadily."
+   ],
+   "Consistency":[
+    "Monthly saving creates a strong habit.",
+    "Skipping savings weakens long-term plans.",
+    "Consistency is more important than amount."
+   ],
+   "Benefits":[
+    "Creates future financial freedom.",
+    "Reduces money-related stress.",
+    "Helps achieve personal goals faster."
+   ],
+   "Key Takeaways":[
+    "Save before spending.",
+    "Be consistent every month.",
+    "Think long-term for wealth."
+   ]
+  },
+  "quiz":{
+   "question":"Recommended savings?",
+   "options":["5%","10%","20%","50%"],
+   "answer":"20%"
+  }
+ },
 
 
-  "Payment history is the biggest factor": [
-    "Paying bills on time positively impacts your credit score.",
-    "Late or missed payments can significantly reduce your score.",
-    "Consistent payment history builds lender trust."
-  ],
+  "Payment history is the biggest factor":{
+  "modules":{
+   "Meaning":[
+    "Payment history shows how reliably you pay your bills.",
+    "It is the most influential factor in your credit score.",
+    "Lenders trust borrowers with strong payment records."
+   ],
+   "Late Payments":[
+    "Even one late payment can reduce your score.",
+    "Late records stay on reports for years.",
+    "They make loan approvals harder."
+   ],
+   "Defaults":[
+    "Defaults indicate inability to repay debt.",
+    "They seriously damage your creditworthiness.",
+    "Legal recovery may follow defaults."
+   ],
+   "Good Habits":[
+    "Set auto-debit for bills.",
+    "Use reminders for due dates.",
+    "Pay more than minimum dues."
+   ],
+   "Key Takeaways":[
+    "Always pay on time.",
+    "Avoid missed payments.",
+    "Strong payment history builds trust."
+   ]
+  },
+  "quiz":{
+   "question":"What impacts credit score most?",
+   "options":["Income","Payment history","Bank","Age"],
+   "answer":"Payment history"
+  }
+ },
 
-  "Keep credit utilization below 30%": [
-    "Credit utilization measures how much credit you are using.",
-    "Using less than 30% of your available credit is ideal.",
-    "Lower utilization signals responsible credit behavior."
-  ],
+  "Keep credit utilization below 30%":{
+  "modules":{
+   "Utilization":[
+    "Credit utilization is the percentage of your available credit that you use.",
+    "Lower utilization shows financial discipline.",
+    "It is one of the most important factors affecting credit score."
+   ],
+   "High Usage":[
+    "Using most of your credit limit signals financial stress.",
+    "High utilization can quickly reduce your credit score.",
+    "Banks may lower your credit limit if they see risky behavior."
+   ],
+   "Ideal Level":[
+    "Below 30% utilization is considered healthy.",
+    "Keeping it under 10% results in the best scores.",
+    "Low balances improve lender trust."
+   ],
+   "Management":[
+    "Pay your dues before the statement generation date.",
+    "Avoid maxing out credit cards.",
+    "Request limit increases to improve utilization ratio."
+   ],
+   "Key Takeaways":[
+    "Lower utilization leads to higher credit scores.",
+    "Early payments reduce interest and improve score.",
+    "Maintain healthy credit behavior."
+   ]
+  },
+  "quiz":{
+   "question":"Ideal utilization?",
+   "options":["10%","30%","70%","90%"],
+   "answer":"30%"
+  }
+ },
 
-  "Avoid late payments and defaults": [
-    "Late payments remain on your credit report for years.",
-    "Defaults severely damage your creditworthiness.",
-    "Timely payments protect and improve your score."
-  ],
+  "Avoid late payments and defaults":{
+  "modules":{
+   "Late Payments":[
+    "Late payments immediately reduce your credit score.",
+    "They attract penalty charges and extra interest.",
+    "Repeated delays weaken your borrowing profile."
+   ],
+   "Defaults":[
+    "Defaults indicate long-term failure to repay loans.",
+    "They severely damage your financial reputation.",
+    "They can lead to legal recovery and blacklisting."
+   ],
+   "Causes":[
+    "Not tracking expenses leads to missed dues.",
+    "Ignoring reminders causes payment failures.",
+    "Borrowing more than affordable increases default risk."
+   ],
+   "Prevention":[
+    "Use auto-debit to avoid missing payments.",
+    "Maintain an emergency fund for unexpected expenses.",
+    "Track all card and loan due dates."
+   ],
+   "Key Takeaways":[
+    "Always pay bills on time.",
+    "Avoid defaults at all costs.",
+    "Financial discipline protects your credit health."
+   ]
+  },
+  "quiz":{
+   "question":"What severely damages credit?",
+   "options":["Cash","Defaults","Savings","FD"],
+   "answer":"Defaults"
+  }
+ },
 
-  "Having a long credit history boosts your score": [
-    "Longer credit history shows experience with credit.",
-    "Older accounts positively affect score calculations.",
-    "Maintaining old accounts can improve credit health."
-  ],
+  "Having a long credit history boosts your score":{
+  "modules":{
+   "Credit Age":[
+    "Credit age refers to how long your accounts have been active.",
+    "Older accounts build lender confidence.",
+    "Longer history improves overall credit score."
+   ],
+   "Account Closure":[
+    "Closing old credit cards reduces your credit age.",
+    "It can lower your credit score.",
+    "Old accounts should be kept active with small usage."
+   ],
+   "Consistency":[
+    "Regular card usage shows responsible borrowing.",
+    "Paying dues on time strengthens credit reliability.",
+    "Stable behavior improves loan approval chances."
+   ],
+   "New Credit":[
+    "Opening many new accounts reduces average credit age.",
+    "Multiple loan inquiries hurt your score.",
+    "Apply for credit only when necessary."
+   ],
+   "Key Takeaways":[
+    "Maintain old credit accounts.",
+    "Avoid unnecessary new credit.",
+    "Consistency builds strong credit."
+   ]
+  },
+  "quiz":{
+   "question":"What improves score over time?",
+   "options":["New cards","Old history","High balance","Cash"],
+   "answer":"Old history"
+  }
+ },
 
 
-  "Importance of starting retirement savings early": [
-    "Early savings benefit the most from compound interest.",
-    "Small contributions grow significantly over time.",
-    "Starting early reduces financial stress later in life."
-  ],
+  "Importance of starting retirement savings early":{
+  "modules":{
+   "Early Start":[
+    "Early investing benefits most from compound growth.",
+    "Longer time means higher wealth creation.",
+    "Small monthly savings grow significantly."
+   ],
+   "Late Start":[
+    "Delaying retirement saving requires higher monthly contributions.",
+    "Late starters experience more financial pressure.",
+    "They accumulate less wealth."
+   ],
+   "Small SIP":[
+    "Small SIPs invested early create large retirement funds.",
+    "Consistency is more powerful than amount.",
+    "Time multiplies returns."
+   ],
+   "Retirement Goals":[
+    "Retirement planning ensures financial independence.",
+    "Healthcare costs rise with age.",
+    "Inflation reduces purchasing power."
+   ],
+   "Key Takeaways":[
+    "Start early to benefit from compounding.",
+    "Save consistently.",
+    "Time is your biggest asset."
+   ]
+  },
+  "quiz":{
+   "question":"Why start early?",
+   "options":["Reduce tax","Compounding","High risk","Luxury"],
+   "answer":"Compounding"
+  }
+ },
 
-  "Differences between 401(k), IRA, and Roth accounts": [
-    "401(k) plans are employer-sponsored retirement accounts.",
-    "Traditional IRAs offer tax-deferred growth.",
-    "Roth accounts allow tax-free withdrawals in retirement."
-  ],
+  "Differences between 401(k), IRA, and Roth accounts":{
+  "modules":{
+   "401k":[
+    "401(k) is an employer-sponsored retirement plan.",
+    "Contributions are made before tax.",
+    "Employer matching boosts retirement savings."
+   ],
+   "Traditional IRA":[
+    "Offers tax-deferred growth.",
+    "Taxes are paid during withdrawal.",
+    "Useful for reducing current taxable income."
+   ],
+   "Roth IRA":[
+    "Contributions are made after tax.",
+    "Withdrawals in retirement are tax-free.",
+    "Ideal for young earners."
+   ],
+   "Comparison":[
+    "401(k) has higher contribution limits.",
+    "Roth provides tax-free income later.",
+    "Choose based on your tax planning."
+   ],
+   "Key Takeaways":[
+    "All accounts support retirement savings.",
+    "Roth benefits long-term growth.",
+    "Always use employer match."
+   ]
+  },
+  "quiz":{
+   "question":"Which offers tax-free withdrawals?",
+   "options":["401k","Roth IRA","Traditional IRA","FD"],
+   "answer":"Roth IRA"
+  }
+ },
 
-  "Employer matches boost retirement growth": [
-    "Employer matches are essentially free money.",
-    "Not contributing enough means missing extra income.",
-    "Maximizing matches accelerates retirement savings."
-  ],
+  "Employer matches boost retirement growth":{
+  "modules":{
+   "Employer Match":[
+    "Employer match is free money added to your retirement fund.",
+    "It doubles your contribution growth.",
+    "Ignoring it means losing guaranteed returns."
+   ],
+   "Contribution":[
+    "Contribute at least the minimum to qualify for full match.",
+    "Never skip employer match benefits.",
+    "Increasing contribution increases free money."
+   ],
+   "Growth":[
+    "Matched contributions compound over time.",
+    "Creates significant long-term wealth.",
+    "Requires no additional effort."
+   ],
+   "Mistakes":[
+    "Delaying enrollment reduces future wealth.",
+    "Not maximizing match wastes money.",
+    "Changing jobs without transfer planning."
+   ],
+   "Key Takeaways":[
+    "Employer match is free income.",
+    "Always maximize it.",
+    "It greatly boosts retirement savings."
+   ]
+  },
+  "quiz":{
+   "question":"Employer match is?",
+   "options":["Loan","Bonus","Free money","Tax"],
+   "answer":"Free money"
+  }
+ },
 
-  "Withdrawal rules and penalties to avoid": [
-    "Early withdrawals often incur penalties and taxes.",
-    "Understanding rules prevents costly mistakes.",
-    "Proper planning ensures smooth retirement income."
-  ],
+  "Withdrawal rules and penalties to avoid":{
+  "modules":{
+   "Early Withdrawal":[
+    "Withdrawing retirement money early triggers penalties.",
+    "It also reduces future compounding.",
+    "It increases taxable income."
+   ],
+   "Penalty":[
+    "Standard penalty is 10% of withdrawn amount.",
+    "Income tax also applies.",
+    "This significantly reduces your savings."
+   ],
+   "Exceptions":[
+    "Medical emergencies may allow penalty-free withdrawal.",
+    "Education and home purchase have special provisions.",
+    "Always check rules before withdrawing."
+   ],
+   "Planning":[
+    "Use emergency funds instead of retirement money.",
+    "Plan expenses to avoid early withdrawal.",
+    "Protect retirement savings."
+   ],
+   "Key Takeaways":[
+    "Avoid early withdrawals.",
+    "Protect retirement corpus.",
+    "Plan finances wisely."
+   ]
+  },
+  "quiz":{
+   "question":"Penalty for early withdrawal?",
+   "options":["2%","10%","25%","0%"],
+   "answer":"10%"
+  }
+ },
 
  
-  "Difference between stocks, ETFs, and index funds": [
-    "Stocks represent ownership in a single company.",
-    "ETFs hold a basket of assets and trade like stocks.",
-    "Index funds track market indexes for diversification."
-  ],
+  "Difference between stocks, ETFs, and index funds":{
+  "modules":{
+   "Stocks":[
+    "Stocks represent ownership in a company.",
+    "They offer high growth potential.",
+    "Prices fluctuate frequently."
+   ],
+   "ETFs":[
+    "ETFs hold a basket of securities.",
+    "They trade on exchanges like stocks.",
+    "They provide diversification."
+   ],
+   "Index Funds":[
+    "They track a market index.",
+    "They have low expense ratios.",
+    "They are suitable for long-term investors."
+   ],
+   "Comparison":[
+    "Stocks are riskier but offer higher returns.",
+    "Funds are more stable and diversified.",
+    "Choose based on risk appetite."
+   ],
+   "Key Takeaways":[
+    "Stocks are volatile.",
+    "Funds provide diversification.",
+    "Index funds are ideal for long-term wealth."
+   ]
+  },
+  "quiz":{
+   "question":"Which tracks market index?",
+   "options":["ETF","Index fund","Stock","FD"],
+   "answer":"Index fund"
+  }
+ },
 
-  "What market capitalization means": [
-    "Market capitalization is a company’s total market value.",
-    "It is calculated by share price multiplied by shares outstanding.",
-    "Companies are classified as small, mid, or large cap."
-  ],
+  "What market capitalization means":{
+  "modules":{
+   "Definition":[
+    "Market capitalization is the total market value of a company.",
+    "It is calculated as share price multiplied by total outstanding shares.",
+    "It indicates the overall size of a company."
+   ],
+   "Types":[
+    "Small-cap companies have high growth potential but higher risk.",
+    "Mid-cap companies balance growth and stability.",
+    "Large-cap companies are more stable and well-established."
+   ],
+   "Importance":[
+    "Market cap reflects company stability and risk.",
+    "It helps investors compare companies.",
+    "It guides long-term investment choices."
+   ],
+   "Usage":[
+    "Large-cap stocks are considered safer.",
+    "Small-cap stocks offer higher growth opportunities.",
+    "Balanced portfolios mix all market caps."
+   ],
+   "Key Takeaways":[
+    "Market cap defines company size.",
+    "Large-cap stocks are safer.",
+    "Small-cap stocks are riskier."
+   ]
+  },
+  "quiz":{
+   "question":"Market cap is?",
+   "options":["Profit","Share price × shares","Turnover","Tax"],
+   "answer":"Share price × shares"
+  }
+ },
 
-  "Long-term investing vs short-term trading": [
-    "Long-term investing focuses on gradual wealth growth.",
-    "Short-term trading seeks quick profits from price changes.",
-    "Long-term strategies generally carry less risk."
-  ],
+  "Long-term investing vs short-term trading":{
+  "modules":{
+   "Long Term":[
+    "Focuses on gradual wealth creation.",
+    "Lower stress and reduced monitoring.",
+    "Suitable for most investors."
+   ],
+   "Short Term":[
+    "Aims for quick profits.",
+    "Involves higher risk.",
+    "Requires frequent market monitoring."
+   ],
+   "Tax":[
+    "Long-term investments attract lower tax rates.",
+    "Short-term gains are taxed higher.",
+    "Taxes directly affect net returns."
+   ],
+   "Who Should":[
+    "Beginners should choose long-term investing.",
+    "Experienced traders may attempt short-term trading.",
+    "Choice depends on risk tolerance."
+   ],
+   "Key Takeaways":[
+    "Long-term investing is safer.",
+    "Short-term trading is riskier.",
+    "Choose based on goals."
+   ]
+  },
+  "quiz":{
+   "question":"Which is safer?",
+   "options":["Trading","Long-term investing","Crypto","Day trade"],
+   "answer":"Long-term investing"
+  }
+ },
 
-  "Why stock prices change daily": [
-    "Prices fluctuate due to supply and demand.",
-    "Company performance and news impact prices.",
-    "Market sentiment influences daily movements."
-  ],
+  "Why stock prices change daily":{
+  "modules":{
+   "Demand & Supply":[
+    "More buyers push prices higher.",
+    "More sellers push prices lower.",
+    "Prices move based on market demand."
+   ],
+   "Company News":[
+    "Earnings reports influence stock prices.",
+    "Management changes affect investor confidence.",
+    "New projects and expansions impact valuation."
+   ],
+   "Economic Factors":[
+    "Inflation rates affect business costs.",
+    "Interest rates influence borrowing and spending.",
+    "Economic growth impacts market sentiment."
+   ],
+   "Sentiment":[
+    "Fear and greed drive short-term movements.",
+    "Global news affects investor decisions.",
+    "Market mood can shift rapidly."
+   ],
+   "Key Takeaways":[
+    "Stock prices change daily due to market forces.",
+    "News and economic factors affect prices.",
+    "Demand and supply drive the market."
+   ]
+  },
+  "quiz":{
+   "question":"What mainly moves stock prices?",
+   "options":["Luck","Demand & Supply","Name","Color"],
+   "answer":"Demand & Supply"
+  }
+ },
 
-  "Difference between tax credits and tax deductions": [
-    "Tax credits reduce your tax bill directly.",
-    "Tax deductions reduce taxable income.",
-    "Credits are generally more valuable than deductions."
-  ],
+  "Difference between tax credits and tax deductions":{
+  "modules":{
+   "Tax Credits":[
+    "Tax credits directly reduce the amount of tax you must pay.",
+    "They provide rupee-for-rupee tax savings.",
+    "Examples include education and child care credits."
+   ],
+   "Tax Deductions":[
+    "Deductions reduce your taxable income.",
+    "They lower the tax slab impact on income.",
+    "Common deductions include Section 80C investments."
+   ],
+   "Comparison":[
+    "Credits provide higher savings than deductions.",
+    "Deductions provide partial tax relief.",
+    "Both are legal and encouraged by the government."
+   ],
+   "Planning":[
+    "Use deductions to lower taxable income.",
+    "Use credits to reduce final tax payable.",
+    "File returns carefully to avoid losing benefits."
+   ],
+   "Key Takeaways":[
+    "Credits reduce tax directly.",
+    "Deductions reduce taxable income.",
+    "Using both maximizes tax savings."
+   ]
+  },
+  "quiz":{
+   "question":"Which reduces tax bill directly?",
+   "options":["Deduction","Credit","Slab","FD"],
+   "answer":"Credit"
+  }
+ },
 
-  "How tax brackets work": [
-    "Income is taxed in progressive brackets.",
-    "Only income within a bracket is taxed at that rate.",
-    "Moving to a higher bracket doesn’t tax all income higher."
-  ],
+  "How tax brackets work":{
+  "modules":{
+   "Tax Slabs":[
+    "Income is divided into predefined tax slabs.",
+    "Each slab has a different tax rate.",
+    "Higher income portions fall into higher slabs."
+   ],
+   "Marginal Tax":[
+    "Only the income that exceeds a slab limit is taxed at the higher rate.",
+    "Your entire income is never taxed at the highest slab.",
+    "This protects taxpayers from sudden heavy tax burden."
+   ],
+   "Examples":[
+    "Only income above slab thresholds is taxed higher.",
+    "Remaining income stays taxed at lower slab rates.",
+    "This ensures fair and progressive taxation."
+   ],
+   "Planning":[
+    "Use deductions to stay in lower slabs.",
+    "Invest in tax-saving instruments.",
+    "Plan salary components smartly."
+   ],
+   "Key Takeaways":[
+    "Only excess income is taxed higher.",
+    "Not all income falls in highest slab.",
+    "Smart planning reduces tax burden."
+   ]
+  },
+  "quiz":{
+   "question":"Are all income taxed at higher slab?",
+   "options":["Yes","No","Sometimes","Always"],
+   "answer":"No"
+  }
+ },
 
-  "Common tax forms and filing statuses": [
-    "Forms like W-2 and 1099 report income.",
-    "Filing status affects tax rates and deductions.",
-    "Choosing correctly can reduce tax liability."
-  ],
+  "Common tax forms and filing statuses":{
+  "modules":{
+   "Forms":[
+    "W-2 reports salary income.",
+    "1099 reports freelance or contract income.",
+    "Form 16 is provided by employers in India."
+   ],
+   "Statuses":[
+    "Single is used by individual earners.",
+    "Married filing jointly is used by couples.",
+    "Head of household is used by those supporting dependents."
+   ],
+   "Importance":[
+    "Correct filing status determines tax rates.",
+    "It affects deductions and exemptions.",
+    "Wrong selection may increase tax payable."
+   ],
+   "Mistakes":[
+    "Selecting wrong filing status.",
+    "Missing income documents.",
+    "Late filing of returns."
+   ],
+   "Key Takeaways":[
+    "Choose filing status carefully.",
+    "Keep all income forms ready.",
+    "Always file before the deadline."
+   ]
+  },
+  "quiz":{
+   "question":"Which form shows salary income?",
+   "options":["1099","W-2","PAN","GST"],
+   "answer":"W-2"
+  }
+ },
 
-  "Strategies to reduce taxable income legally": [
-    "Retirement contributions lower taxable income.",
-    "Tax deductions and credits reduce taxes owed.",
-    "Proper planning avoids overpaying taxes."
-  ]
+  "Strategies to reduce taxable income legally":{
+  "modules":{
+   "Investments":[
+    "ELSS, PPF and NPS investments reduce taxable income under government tax-saving sections.",
+    "They encourage disciplined long-term investing.",
+    "They help build retirement and wealth simultaneously."
+   ],
+   "Insurance":[
+    "Health insurance premiums qualify for tax deductions.",
+    "They provide financial protection against medical emergencies.",
+    "They reduce your annual tax burden."
+   ],
+   "Allowances":[
+    "HRA and LTA reduce taxable salary legally.",
+    "Smart salary structuring increases take-home income.",
+    "Proper declaration and proofs are mandatory."
+   ],
+   "Donations":[
+    "Donations under Section 80G provide partial or full tax relief.",
+    "They support social and charitable causes.",
+    "They reduce taxable income legally."
+   ],
+   "Key Takeaways":[
+    "Start tax planning early in the year.",
+    "Use investments and insurance wisely.",
+    "Reduce taxes while building wealth."
+   ]
+  },
+  "quiz":{
+   "question":"Which reduces taxable income?",
+   "options":["Credit card","ELSS","Cash","Shopping"],
+   "answer":"ELSS"
+  }
+ }
+
+
 }
