@@ -85,6 +85,81 @@ export default function LessonContent({
 
   const isCorrect = selectedAnswer === currentQuiz.answer;
 
+  /* =======================
+     PROGRESS STATE
+  ======================= */
+  const [completedSubtopics, setCompletedSubtopics] = useState<Set<string>>(
+    new Set()
+  );
+  const [isCompleting, setIsCompleting] = useState(false);
+
+  // Fetch completed subtopics on mount
+  useEffect(() => {
+    const fetchProgress = async () => {
+      try {
+        const res = await fetch(
+          `${process.env.NEXT_PUBLIC_API_URL}/api/progress/lesson-progress`,
+          {
+            credentials: "include",
+          }
+        );
+        if (res.ok) {
+          const data = await res.json();
+          const mapped = data.progress.map(
+            (p: { lesson_slug: string; subtopic_title: string }) =>
+              `${p.lesson_slug}:${p.subtopic_title}`
+          );
+          const completed = new Set<string>(mapped);
+          setCompletedSubtopics(completed);
+        }
+      } catch (err) {
+        console.error("Failed to fetch progress:", err);
+      }
+    };
+    fetchProgress();
+  }, []);
+
+  const handleComplete = async () => {
+    const key = `${activeLessonSlug}:${activeSubtopicTitle}`;
+    if (completedSubtopics.has(key)) {
+      return; // Already completed
+    }
+
+    setIsCompleting(true);
+    try {
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/progress/complete-subtopic`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+          body: JSON.stringify({
+            lessonSlug: activeLessonSlug,
+            subtopicTitle: activeSubtopicTitle,
+          }),
+        }
+      );
+
+      if (res.ok) {
+        setCompletedSubtopics((prev) => {
+          const arr = Array.from(prev);
+          arr.push(key);
+          return new Set<string>(arr);
+        });
+      } else {
+        console.error("Failed to mark as complete");
+      }
+    } catch (err) {
+      console.error("Error completing subtopic:", err);
+    } finally {
+      setIsCompleting(false);
+    }
+  };
+
+  const isCompleted = completedSubtopics.has(
+    `${activeLessonSlug}:${activeSubtopicTitle}`
+  );
+
   return (
     <div className="flex h-screen bg-emerald-50/50 overflow-hidden">
       {/* =======================
@@ -211,6 +286,33 @@ export default function LessonContent({
                   )}
                 </section>
               )}
+
+              {/* COMPLETE BUTTON */}
+              <div className="flex justify-end pt-4">
+                <button
+                  onClick={handleComplete}
+                  disabled={isCompleted || isCompleting}
+                  className={`
+                    px-6 py-3 rounded-lg font-medium transition-all duration-200
+                    ${
+                      isCompleted
+                        ? "bg-emerald-500 text-white cursor-default"
+                        : "bg-emerald-600 hover:bg-emerald-700 text-white hover:shadow-lg"
+                    }
+                    ${isCompleting ? "opacity-50 cursor-not-allowed" : ""}
+                  `}
+                >
+                  {isCompleted ? (
+                    <span className="flex items-center gap-2">
+                      ✓ Completed
+                    </span>
+                  ) : isCompleting ? (
+                    "Completing..."
+                  ) : (
+                    "Mark as Complete"
+                  )}
+                </button>
+              </div>
             </>
           ) : (
             <section className="rounded-xl bg-white p-6 shadow-sm border">

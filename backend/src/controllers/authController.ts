@@ -41,6 +41,16 @@ export const signup = async (req: Request, res: Response) => {
 
     const user = result.rows[0];
 
+    // Initialize user stats
+    await pool.query(
+      `
+      INSERT INTO user_stats (user_id, streak, last_activity_date, total_xp, level, topics_completed, quizzes_taken)
+      VALUES ($1, 0, NULL, 0, 1, 0, 0)
+      ON CONFLICT (user_id) DO NOTHING
+      `,
+      [user.id]
+    );
+
     // Sign JWT
     const token = signToken({
       id: user.id,

@@ -210,13 +210,34 @@ export default function QuizPage() {
     }
   };
 
-  const handleNext = () => {
+  const handleNext = async () => {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
       setSelectedAnswer(null);
       setShowFeedback(false);
     } else {
       setIsQuizComplete(true);
+      // Record quiz attempt
+      await recordQuizAttempt();
+    }
+  };
+
+  const recordQuizAttempt = async () => {
+    try {
+      const percentage = Math.round((score / questions.length) * 100);
+      await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/progress/quiz-attempt`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({
+          quizSubject: category || 'General',
+          score: percentage,
+          totalQuestions: questions.length,
+          correctAnswers: score,
+        }),
+      });
+    } catch (err) {
+      console.error('Failed to record quiz attempt:', err);
     }
   };
 
