@@ -24,8 +24,8 @@ export default async function LessonPage({ params }: PageProps) {
     title={lesson.title}
     description={lesson.description}
     subtopics={subtopics}
-    quiz={lesson.quiz}
     level={lesson.level}
+    slug={lesson.slug}
   />
 );
 
