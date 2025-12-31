@@ -52,7 +52,7 @@ export const SignupForm = () => {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4">
       <div className="flex items-center gap-3">
         <div className="bg-emerald-100 p-3 rounded-lg">
           <Brain className="w-6 h-6 text-emerald-600" />
@@ -72,7 +72,7 @@ export const SignupForm = () => {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-3">
         <div>
           <label className="text-sm font-medium text-slate-700">Name</label>
           <div className="mt-1 flex items-center gap-2 border rounded-lg px-3 py-2 focus-within:ring-2 focus-within:ring-emerald-500">

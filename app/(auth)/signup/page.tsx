@@ -4,19 +4,26 @@ import { SignupForm } from '@/components/auth/SignupForm';
 
 export default function SignupPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-emerald-50 px-4">
-      <div className="w-full max-w-5xl bg-white rounded-2xl shadow-xl overflow-hidden grid md:grid-cols-2">
-        <div className="hidden md:flex items-center justify-center bg-emerald-100 p-10">
-          <img
-            src="/auth-finance.svg"
-            alt="Finance Learning"
-            className="max-w-sm"
-          />
-        </div>
-        <div className="p-10">
-          <SignupForm />
-        </div>
+    <div className="bg-white rounded-2xl shadow-xl flex max-w-4xl w-full overflow-hidden">
+
+
+
+      {/* Left Image */}
+      <div className="hidden md:block w-1/2 relative bg-emerald-100 overflow-hidden">
+
+        <img
+          src="/finai-signup.png"
+          alt="Finance learning"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
       </div>
+
+      {/* Form */}
+      <div className="w-full md:w-1/2 p-10">
+
+        <SignupForm />
+      </div>
+
     </div>
   );
 }
