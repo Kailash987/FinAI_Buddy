@@ -57,13 +57,33 @@ export const signup = async (req: Request, res: Response) => {
       email: user.email,
     });
 
+    // Determine cookie settings for cross-domain support
+    // When backend is on Render (HTTPS) and frontend is on localhost (HTTP), we need sameSite: "none"
+    const origin = req.headers.origin || "";
+    const backendUrl = `${req.protocol}://${req.get("host")}`;
+    const isBackendHTTPS = req.protocol === "https";
+    const isFrontendHTTP = origin.startsWith("http://");
+    const isFrontendLocalhost = origin.includes("localhost") || origin.includes("127.0.0.1");
+    // Cross-domain: backend HTTPS + frontend HTTP (localhost), or different domains
+    const isCrossDomain = (isBackendHTTPS && isFrontendHTTP && isFrontendLocalhost) || 
+                          (origin && origin !== backendUrl && origin !== "");
+    const isProduction = process.env.NODE_ENV === "production" || !!process.env.RENDER;
+    
     // Set HTTP-only cookie
-    res.cookie("token", token, {
+    // For cross-domain (Render backend + localhost frontend), use sameSite: "none" and secure: true
+    const cookieOptions: {
+      httpOnly: boolean;
+      secure: boolean;
+      sameSite: "none" | "lax" | "strict";
+      maxAge: number;
+    } = {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
+      secure: !!(isProduction || isCrossDomain), // true for production or cross-domain
+      sameSite: isCrossDomain ? "none" : "lax",
       maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
-    });
+    };
+    
+    res.cookie("token", token, cookieOptions);
 
     return res.status(201).json({
       message: "Signup successful",
@@ -129,13 +149,33 @@ export const login = async (req: Request, res: Response) => {
       email: user.email,
     });
 
+    // Determine cookie settings for cross-domain support
+    // When backend is on Render (HTTPS) and frontend is on localhost (HTTP), we need sameSite: "none"
+    const origin = req.headers.origin || "";
+    const backendUrl = `${req.protocol}://${req.get("host")}`;
+    const isBackendHTTPS = req.protocol === "https";
+    const isFrontendHTTP = origin.startsWith("http://");
+    const isFrontendLocalhost = origin.includes("localhost") || origin.includes("127.0.0.1");
+    // Cross-domain: backend HTTPS + frontend HTTP (localhost), or different domains
+    const isCrossDomain = (isBackendHTTPS && isFrontendHTTP && isFrontendLocalhost) || 
+                          (origin && origin !== backendUrl && origin !== "");
+    const isProduction = process.env.NODE_ENV === "production" || !!process.env.RENDER;
+    
     // Set HTTP-only cookie
-    res.cookie("token", token, {
+    // For cross-domain (Render backend + localhost frontend), use sameSite: "none" and secure: true
+    const cookieOptions: {
+      httpOnly: boolean;
+      secure: boolean;
+      sameSite: "none" | "lax" | "strict";
+      maxAge: number;
+    } = {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
+      secure: !!(isProduction || isCrossDomain), // true for production or cross-domain
+      sameSite: isCrossDomain ? "none" : "lax",
       maxAge: 7 * 24 * 60 * 60 * 1000,
-    });
+    };
+    
+    res.cookie("token", token, cookieOptions);
 
     return res.status(200).json({
       message: "Login successful",
@@ -172,8 +212,29 @@ export const getMe = async (req: Request, res: Response) => {
 /**
  * LOGOUT
  */
-export const logout = async (_req: Request, res: Response) => {
-  res.clearCookie("token");
+export const logout = async (req: Request, res: Response) => {
+  // Determine cookie settings for cross-domain support
+  const origin = req.headers.origin || "";
+  const backendUrl = `${req.protocol}://${req.get("host")}`;
+  const isBackendHTTPS = req.protocol === "https";
+  const isFrontendHTTP = origin.startsWith("http://");
+  const isFrontendLocalhost = origin.includes("localhost") || origin.includes("127.0.0.1");
+  // Cross-domain: backend HTTPS + frontend HTTP (localhost), or different domains
+  const isCrossDomain = (isBackendHTTPS && isFrontendHTTP && isFrontendLocalhost) || 
+                        (origin && origin !== backendUrl && origin !== "");
+  const isProduction = process.env.NODE_ENV === "production" || !!process.env.RENDER;
+  
+  const cookieOptions: {
+    httpOnly: boolean;
+    secure: boolean;
+    sameSite: "none" | "lax" | "strict";
+  } = {
+    httpOnly: true,
+    secure: !!(isProduction || isCrossDomain),
+    sameSite: isCrossDomain ? "none" : "lax",
+  };
+  
+  res.clearCookie("token", cookieOptions);
   return res.json({
     message: "Logged out successfully",
   });
