@@ -11,10 +11,28 @@ const app = express();
 
 app.use(
   cors({
-    origin: [
-      "http://localhost:3000",
-      "https://finai-buddy.vercel.app",   // <-- your Vercel frontend
-    ],
+    origin: (origin, callback) => {
+      // Allow requests with no origin (like mobile apps, Postman, etc.)
+      if (!origin) {
+        return callback(null, true);
+      }
+      
+      // Allow localhost on any port for development
+      if (origin.match(/^http:\/\/localhost(:\d+)?$/)) {
+        return callback(null, true);
+      }
+      
+      // Allow specific production origins
+      const allowedOrigins = [
+        "https://finai-buddy.vercel.app",
+      ];
+      
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+      
+      callback(new Error("Not allowed by CORS"));
+    },
     credentials: true,
   })
 );
