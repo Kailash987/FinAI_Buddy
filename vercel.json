@@ -2,6 +2,6 @@
   "framework": "nextjs",
   "ignoreCommand": "git diff --quiet HEAD^ HEAD -- backend",
   "git": {
-    "deploymentEnabled": false
+    "deploymentEnabled": true
   }
 }
