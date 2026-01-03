@@ -18,11 +18,17 @@ app.use(
       }
       
       // Allow localhost on any port for development
-      if (origin.match(/^http:\/\/localhost(:\d+)?$/)) {
+      if (origin.match(/^http:\/\/localhost(:\d+)?$/) || 
+          origin.match(/^http:\/\/127\.0\.0\.1(:\d+)?$/)) {
         return callback(null, true);
       }
       
-      // Allow specific production origins
+      // Allow all Vercel deployments (*.vercel.app)
+      if (origin.match(/^https:\/\/.*\.vercel\.app$/)) {
+        return callback(null, true);
+      }
+      
+      // Allow specific production origins (if you have a custom domain)
       const allowedOrigins = [
         "https://finai-buddy.vercel.app",
       ];
@@ -31,6 +37,8 @@ app.use(
         return callback(null, true);
       }
       
+      // Log rejected origins for debugging
+      console.log(`CORS rejected origin: ${origin}`);
       callback(new Error("Not allowed by CORS"));
     },
     credentials: true,
