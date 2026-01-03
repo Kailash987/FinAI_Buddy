@@ -66,7 +66,7 @@ export default function ProgressPage() {
   const chartNotStarted = notStartedSubtopics;
 
   // Quiz Performance Data
-  const safeQuizData = Array.isArray(stats?.recentQuizzes) ? stats.recentQuizzes : [];
+  const safeQuizData = stats?.recentQuizzes ?? [];
   let correctPercentage = 0;
   let wrongPercentage = 0;
   
