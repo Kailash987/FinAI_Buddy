@@ -103,6 +103,13 @@ export default function LessonContent({
             credentials: "include",
           }
         );
+        
+        if (res.status === 401) {
+          // Token expired or invalid - redirect to login
+          window.location.href = '/login';
+          return;
+        }
+        
         if (res.ok) {
           const data = await res.json();
           const mapped = data.progress.map(
@@ -114,6 +121,7 @@ export default function LessonContent({
         }
       } catch (err) {
         console.error("Failed to fetch progress:", err);
+        // Don't automatically redirect on network errors, just log them
       }
     };
     fetchProgress();
@@ -139,6 +147,12 @@ export default function LessonContent({
           }),
         }
       );
+
+      if (res.status === 401) {
+        // Token expired or invalid - redirect to login
+        window.location.href = '/login';
+        return;
+      }
 
       if (res.ok) {
         setCompletedSubtopics((prev) => {

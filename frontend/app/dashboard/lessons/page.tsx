@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import LessonCard from '@/components/LessonCard';
 import { BookOpen } from 'lucide-react';
 import lessonsData from '@/data/lessons.json';
@@ -13,6 +14,7 @@ interface ProgressItem {
 export default function LessonsPage() {
   const [progress, setProgress] = useState<ProgressItem[]>([]);
   const [loading, setLoading] = useState(true);
+  const router = useRouter();
 
   useEffect(() => {
     const fetchProgress = async () => {
@@ -23,6 +25,12 @@ export default function LessonsPage() {
             credentials: 'include',
           }
         );
+        
+        if (res.status === 401) {
+          router.replace('/login');
+          return;
+        }
+        
         if (res.ok) {
           const data = await res.json();
           setProgress(data.progress || []);
@@ -34,7 +42,7 @@ export default function LessonsPage() {
       }
     };
     fetchProgress();
-  }, []);
+  }, [router]);
 
   // Calculate progress percentage for each lesson
   const getLessonProgress = (lessonSlug: string) => {

@@ -20,13 +20,12 @@ export default async function LessonPage({ params }: PageProps) {
   }));
 
   return (
-  <LessonContent
-    title={lesson.title}
-    description={lesson.description}
-    subtopics={subtopics}
-    level={lesson.level}
-    slug={lesson.slug}
-  />
-);
-
+    <LessonContent
+      title={lesson.title}
+      description={lesson.description}
+      subtopics={subtopics}
+      level={lesson.level}
+      slug={lesson.slug}
+    />
+  );
 }

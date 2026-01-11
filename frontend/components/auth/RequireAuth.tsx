@@ -18,12 +18,18 @@ export const RequireAuth = ({
         credentials: "include",
       });
 
+      if (res.status === 401) {
+        router.replace("/login");
+        return;
+      }
+
       if (!res.ok) {
         router.replace("/login");
       } else {
         setLoading(false);
       }
-    } catch {
+    } catch (error) {
+      console.error("Auth check failed:", error);
       router.replace("/login");
     }
   };
