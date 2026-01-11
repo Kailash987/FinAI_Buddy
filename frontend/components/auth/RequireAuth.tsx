@@ -10,33 +10,45 @@ export const RequireAuth = ({
 }) => {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
+  const [checked, setChecked] = useState(false);
 
   useEffect(() => {
-  const checkAuth = async () => {
-    try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/me`, {
-        credentials: "include",
-      });
+    // Prevent multiple auth checks
+    if (checked) return;
+    
+    const checkAuth = async () => {
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 5000); // 5 second timeout
+        
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/me`, {
+          credentials: "include",
+          signal: controller.signal,
+        });
 
-      if (res.status === 401) {
-        router.replace("/login");
-        return;
+        clearTimeout(timeoutId);
+
+        if (res.status === 401) {
+          router.replace("/login");
+          return;
+        }
+
+        if (!res.ok) {
+          router.replace("/login");
+        } else {
+          setLoading(false);
+          setChecked(true);
+        }
+      } catch (error) {
+        if (error instanceof Error && error.name !== 'AbortError') {
+          console.error("Auth check failed:", error);
+          router.replace("/login");
+        }
       }
+    };
 
-      if (!res.ok) {
-        router.replace("/login");
-      } else {
-        setLoading(false);
-      }
-    } catch (error) {
-      console.error("Auth check failed:", error);
-      router.replace("/login");
-    }
-  };
-
-  checkAuth();
-}, [router]);
-
+    checkAuth();
+  }, [router, checked]);
 
   if (loading) {
     return (

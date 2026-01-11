@@ -97,12 +97,18 @@ export default function LessonContent({
   useEffect(() => {
     const fetchProgress = async () => {
       try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 5000); // 5 second timeout
+        
         const res = await fetch(
           `${process.env.NEXT_PUBLIC_API_URL}/api/progress/lesson-progress`,
           {
             credentials: "include",
+            signal: controller.signal,
           }
         );
+        
+        clearTimeout(timeoutId);
         
         if (res.status === 401) {
           // Token expired or invalid - redirect to login
@@ -113,14 +119,15 @@ export default function LessonContent({
         if (res.ok) {
           const data = await res.json();
           const mapped = data.progress.map(
-            (p: { lesson_slug: string; subtopic_title: string }) =>
-              `${p.lesson_slug}:${p.subtopic_title}`
+            (p: { lesson_slug: string; subtopic_title: string }) => `${p.lesson_slug}:${p.subtopic_title}`
           );
           const completed = new Set<string>(mapped);
           setCompletedSubtopics(completed);
         }
       } catch (err) {
-        console.error("Failed to fetch progress:", err);
+        if (err instanceof Error && err.name !== 'AbortError') {
+          console.error("Failed to fetch progress:", err);
+        }
         // Don't automatically redirect on network errors, just log them
       }
     };
