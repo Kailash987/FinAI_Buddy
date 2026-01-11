@@ -3,12 +3,10 @@ FinAI Buddy is a modern, responsive FinTech learning assistant built with Next.j
 
 ## 🚀 Getting Started
 ```sh
-Step 1: Clone the Repository
+ Clone the Repository
     git clone https://github.com/Kailash987/FinAIance-Buddy.git
-    cd FinAIance-Buddy
+    cd FinAI_Buddy
 
-Step 2: Install Dependencies
-    npm install
 
 ```
 
@@ -16,15 +14,16 @@ Step 2: Install Dependencies
 
 ```sh
 Step 1: Start the Backend Server
-    npm run server
+    cd backend
+    npm install
+    npm run dev
 
-Step 2: Initialize the Database (Optional)
-    npm run db:init
-
-Step 3: Start the React Frontend
+Step 2: Start the React Frontend
 
     💡 Run this in a new terminal
-    npm run dev -- --force
+    cd frontend
+    npm install
+    npm run dev
 
 ```
 
@@ -39,9 +38,9 @@ Tailwind CSS – Utility-first CSS framework for fast, responsive, and modern UI
 
 Node.js / Express.js – Backend framework for handling server-side logic and RESTful API endpoints.
 
-MongoDB / Mongoose – NoSQL database for storing user profiles, transactions, and financial analytics.
+PostgreSQL – Relational database used for storing user information, lesson progress, and quiz performance in a structured and normalized manner.
 
-AI/ML Integration (Python / TensorFlow / OpenAI API) – Modules for generating personalized financial insights, budgeting recommendations, and predictive expense analysis.
+AI Integration (OpenAI API) – Used for predictive expense analysis, enabling intelligent insights based on user financial behavior.
 
 Next Auth / JWT – Secure authentication and authorization for users.
 
